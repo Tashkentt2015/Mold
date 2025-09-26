@@ -1,9 +1,14 @@
 import productsTR from "@/data/products.tr.json";
 import ProductCard from "@/components/ProductCard";
 import CTAIndividual from "@/components/CTAIndividual";
-import type { Product } from "@/lib/types";
+import type { Product, SiliconeType } from "@/lib/types";
 
-const products: Product[] = productsTR;
+type RawProduct = Omit<Product, "silicone"> & { silicone: string };
+
+const products: Product[] = (productsTR as RawProduct[]).map(product => ({
+  ...product,
+  silicone: product.silicone as SiliconeType,
+}));
 const POPULAR_LIMIT = 8;
 
 export default function Home(){
