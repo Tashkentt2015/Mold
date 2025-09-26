@@ -1,3 +1,4 @@
+import type {ReactNode} from "react";
 import {NextIntlClientProvider} from "next-intl";
 import {defaultLocale, locales} from "@/lib/i18n";
 import LangSwitcher from "@/components/LangSwitcher";
@@ -6,8 +7,9 @@ export function generateStaticParams(){ return locales.map(l=>({locale:l})); }
 export const dynamic = "force-static";
 
 export default async function RootLayout({
-  children, params: {locale}
-}:{children:React.ReactNode; params:{locale:string}}){
+  children, params
+}:{children:ReactNode; params:Promise<{locale:string}>}){
+  const {locale}=await params;
   let messages;
   try{ messages=(await import(`@/messages/${locale}.json`)).default; }
   catch{ messages=(await import(`@/messages/${defaultLocale}.json`)).default; }
