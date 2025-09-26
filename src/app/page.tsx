@@ -1,103 +1,89 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <header className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.35)_0%,_rgba(15,23,42,0)_60%)]" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24 pt-8 sm:px-12 sm:pb-32">
+          <nav className="flex items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-500/20 text-lg font-semibold text-sky-300">
+                M
+              </span>
+              <span className="text-lg font-semibold tracking-wide text-white/90">Mold Studio</span>
+            </div>
+            <div className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
+              <a className="transition hover:text-white" href="#products">
+                Продукты
+              </a>
+              <a className="transition hover:text-white" href="#solutions">
+                Решения
+              </a>
+              <a className="transition hover:text-white" href="#cases">
+                Кейсы
+              </a>
+              <a className="transition hover:text-white" href="#contacts">
+                Контакты
+              </a>
+            </div>
+            <button className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-900 shadow-lg shadow-sky-500/30 transition hover:-translate-y-0.5 hover:bg-sky-100">
+              Оставить заявку
+            </button>
+          </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="grid gap-16 lg:grid-cols-[minmax(0,_1fr)_420px] lg:items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/60">
+                Digital-дизайн
+              </div>
+              <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Создаём выразительные продукты, которые выделяются и работают
+              </h1>
+              <p className="max-w-xl text-base text-white/70 sm:text-lg">
+                Мы объединяем стратегию, дизайн и разработку, чтобы запускать цифровые сервисы, которыми приятно пользоваться. Ваша идея заслуживает премиального воплощения — и мы готовы его обеспечить.
+              </p>
+              <div className="flex flex-col gap-4 text-sm text-white/60 sm:flex-row sm:items-center">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">
+                    12+
+                  </span>
+                  <span className="max-w-[180px] leading-snug">лет опыта в креативных индустриях</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">
+                    40+
+                  </span>
+                  <span className="max-w-[200px] leading-snug">реализованных проектов для международных брендов</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative isolate overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 p-8 shadow-2xl shadow-sky-500/20">
+              <div className="pointer-events-none absolute -left-16 -top-16 h-40 w-40 rounded-full bg-sky-400/30 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -right-10 h-48 w-48 rounded-full bg-purple-500/20 blur-3xl" />
+              <div className="relative space-y-6">
+                <p className="text-sm uppercase tracking-[0.3em] text-white/40">Наш подход</p>
+                <p className="text-lg font-medium text-white/80">
+                  Каждая деталь продумана: от первого экрана до последних пикселей интерфейса. Мы выстраиваем процессы, которые дают измеримый результат и позволяют масштабироваться.
+                </p>
+                <ul className="space-y-4 text-sm text-white/60">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    Кастомные дизайн-системы и UI-киты
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    Глубокая аналитика и исследование аудитории
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400" />
+                    Команда для сопровождения после релиза
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
     </div>
   );
 }
