@@ -1,5 +1,5 @@
 export default function WhatsAppButton({label, text}:{label:string;text:string}){
-  const phone = '90XXXXXXXXXX'; // замените на ваш номер без +
+  const phone = '905370399890'; // замените на ваш номер без +
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   return (
     <a href={url} target="_blank" rel="noopener noreferrer"
