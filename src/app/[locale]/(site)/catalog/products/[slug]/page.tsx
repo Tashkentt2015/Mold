@@ -1,13 +1,16 @@
 import dataTR from '@/data/products.tr.json';
 import Image from 'next/image';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import type { Product } from '@/lib/types';
+
+const products: Product[] = dataTR as Product[];
 
 export async function generateStaticParams(){
-  return (dataTR as any[]).map(p=>({slug:p.slug}));
+  return products.map(p=>({slug:p.slug}));
 }
 
 export default function ProductPage({params}:{params:{slug:string}}){
-  const p = (dataTR as any[]).find(x=>x.slug===params.slug);
+  const p = products.find(x=>x.slug===params.slug);
   if(!p) return null;
   const price = new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'}).format(p.priceTRY);
   return (
