@@ -1,7 +1,8 @@
-import {defineConfig} from 'next-intl';
-import {defaultLocale, locales} from './src/lib/i18n';
+import {defaultLocale, locales} from "./src/lib/i18n";
 
-export default defineConfig({
+const config = {
   locales,
   defaultLocale
-});
+};
+
+export default config;
