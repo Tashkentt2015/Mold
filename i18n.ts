@@ -3,8 +3,8 @@ import {defaultLocale, locales} from "./src/lib/i18n";
 
 type SupportedLocale = typeof locales[number];
 
-function isSupportedLocale(locale:string): locale is SupportedLocale{
-  return locales.includes(locale as SupportedLocale);
+function isSupportedLocale(locale: string | undefined): locale is SupportedLocale {
+  return locale !== undefined && locales.includes(locale as SupportedLocale);
 }
 
 async function loadMessages(locale: SupportedLocale){
@@ -18,8 +18,8 @@ async function loadMessages(locale: SupportedLocale){
   }
 }
 
-export default getRequestConfig(async ({locale})=>{
-  const normalizedLocale = isSupportedLocale(locale) ? locale : defaultLocale;
+export default getRequestConfig(async ({locale}) => {
+  const normalizedLocale: SupportedLocale = isSupportedLocale(locale) ? locale : defaultLocale;
 
   return {
     locale: normalizedLocale,
