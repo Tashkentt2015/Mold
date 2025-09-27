@@ -1,9 +1,3 @@
-
-
-src/app/delivery/page.tsx
-+1
--1
-
 import Link from "next/link";
 
 export default function DeliveryPage() {
