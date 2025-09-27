@@ -42,7 +42,7 @@ export default function CatalogPage() {
               <h3 className="text-base font-semibold">{p.title}</h3>
               <p className="mt-1 line-clamp-2 text-sm text-white/70">{p.shortDescription}</p>
               <div className="mt-3 flex items-center justify-between">
-                               <Link
+                <Link
                   href={{
                     pathname: "/products/[slug]",
                     params: { slug: p.slug },
