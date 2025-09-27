@@ -35,15 +35,11 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4 text-sm text-white/60 sm:flex-row sm:items-center">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">
-                    12+
-                  </span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">12+</span>
                   <span className="max-w-[180px] leading-snug">лет опыта в креативных индустриях</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">
-                    40+
-                  </span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-base font-semibold text-white">40+</span>
                   <span className="max-w-[200px] leading-snug">реализованных проектов для международных брендов</span>
                 </div>
               </div>
