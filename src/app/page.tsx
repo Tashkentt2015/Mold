@@ -13,7 +13,7 @@ export default function Home() {
             </div>
             <div className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
               <a className="transition hover:text-white" href="#products">
-                Продукты
+                КАТАЛОГ
               </a>
               <a className="transition hover:text-white" href="#solutions">
                 Решения
