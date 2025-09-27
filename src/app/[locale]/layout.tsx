@@ -2,6 +2,8 @@ import type {ReactNode} from "react";
 import {NextIntlClientProvider} from "next-intl";
 import {defaultLocale, locales} from "@/lib/i18n";
 import LangSwitcher from "@/components/LangSwitcher";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "MOLD 3000" };
 
 export function generateStaticParams(){ return locales.map(l=>({locale:l})); }
 export const dynamic = "force-static";
@@ -17,7 +19,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className="container mx-auto p-6 grid gap-6">
         <header className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">Silikon Kalıplar</h1>
+          <h1 className="text-2xl font-bold">Mold 3000</h1>
           <LangSwitcher/>
         </header>
         <NextIntlClientProvider messages={messages}>
