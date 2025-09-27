@@ -13,7 +13,12 @@ export default function DeliveryPage() {
           <nav className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
             <Link className="transition hover:text-white" href="/catalog">Каталог</Link>
             <Link className="transition hover:text-white" href="/delivery">Доставка</Link>
-            <Link className="transition hover:text-white" href="/#cases">Кейсы</Link>
+             <Link
+              className="transition hover:text-white"
+              href={{ pathname: "/", hash: "cases" }}
+            >
+              Кейсы
+            </Link>
             <Link className="transition hover:text-white" href="/contacts">Контакты</Link>
           </nav>
         </div>
