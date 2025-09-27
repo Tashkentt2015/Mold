@@ -15,8 +15,12 @@ export default function Home() {
             </div>
             <div className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
               <Link className="transition hover:text-white" href="/catalog">Каталог</Link>
-              <a className="transition hover:text-white" href="/#solutions">Решения</a>
-              <a className="transition hover:text-white" href="/#cases">Кейсы</a>
+               <Link className="transition hover:text-white" href="/#solutions">
+                Решения
+              </Link>
+              <Link className="transition hover:text-white" href="/#cases">
+                Кейсы
+              </Link>
               <Link className="transition hover:text-white" href="/contacts">Контакты</Link>
             </div>
             <button className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-900 shadow-lg shadow-sky-500/30 transition hover:-translate-y-0.5 hover:bg-sky-100">
