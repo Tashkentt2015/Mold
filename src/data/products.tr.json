@@ -1,9 +1,9 @@
 [
   {
     "slug": "kalip-orn1",
-    "title": "Yuvarlak Kek Kalıbı 20 cm",
-    "shortDescription": "Ev ve butik pastacılık için dayanıklı silikon kalıp.",
-    "useCases": ["Kek", "Jöle", "Sabun"],
+    "title": "Yuvarlak Kek KalД±bД± 20 cm",
+    "shortDescription": "Ev ve butik pastacД±lД±k iГ§in dayanД±klД± silikon kalД±p.",
+    "useCases": ["Kek", "JГ¶le", "Sabun"],
     "silicone": "food-grade",
     "sizes": [{ "width": 20, "height": 7, "unit": "cm" }],
     "priceTRY": 480,
