@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-950 text-white">
@@ -12,18 +14,10 @@ export default function Home() {
               <span className="text-lg font-semibold tracking-wide text-white/90">Mold 3000</span>
             </div>
             <div className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
-              <a className="transition hover:text-white" href="#products">
-                КАТАЛОГ
-              </a>
-              <a className="transition hover:text-white" href="#solutions">
-                Решения
-              </a>
-              <a className="transition hover:text-white" href="#cases">
-                Кейсы
-              </a>
-              <a className="transition hover:text-white" href="#contacts">
-                Контакты
-              </a>
+              <Link className="transition hover:text-white" href="/catalog">Каталог</Link>
+              <a className="transition hover:text-white" href="/#solutions">Решения</a>
+              <a className="transition hover:text-white" href="/#cases">Кейсы</a>
+              <Link className="transition hover:text-white" href="/contacts">Контакты</Link>
             </div>
             <button className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-neutral-900 shadow-lg shadow-sky-500/30 transition hover:-translate-y-0.5 hover:bg-sky-100">
               Оставить заявку
