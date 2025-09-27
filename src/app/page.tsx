@@ -9,7 +9,7 @@ export default function Home() {
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-sky-500/20 text-lg font-semibold text-sky-300">
                 M
               </span>
-              <span className="text-lg font-semibold tracking-wide text-white/90">Mold Studio</span>
+              <span className="text-lg font-semibold tracking-wide text-white/90">Mold 3000</span>
             </div>
             <div className="hidden items-center gap-8 text-sm font-medium text-white/70 lg:flex">
               <a className="transition hover:text-white" href="#products">
