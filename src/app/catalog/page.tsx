@@ -45,7 +45,7 @@ export default function CatalogPage() {
                 <Link
                   href={{
                     pathname: "/products/[slug]",
-                    params: { slug: p.slug },
+                    query: { slug: p.slug },
                   }}
                   className="text-sm underline underline-offset-4"
                 >
